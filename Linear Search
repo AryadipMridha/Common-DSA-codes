@@ -1,0 +1,34 @@
+import java.io.*;
+import java.util.*;
+
+public class LinearSearch 
+{
+		public static void LinearS(int arr[],int val)
+		{int searchflag=0;
+		for(int i=0;i<arr.length;i++) {
+			if(arr[i]==val)
+			searchflag=1;
+		}
+		if(searchflag==1)
+				System.out.print("Found");
+			else
+				System.out.println("Not Found");}
+
+
+
+		public static void main(String args[])
+		{
+			Scanner sc=new Scanner(System.in);
+			System.out.println("Enter the size :");
+			int arraysize=sc.nextInt();
+			System.out.println("Now enter the values:");
+			int arr[]=new int[arraysize];
+			for(int i=0;i<arraysize;i++) {
+				arr[i]=sc.nextInt();
+			}
+			System.out.println("Enter the value to searched :");
+			int searchkey=sc.nextInt();
+			LinearS(arr,searchkey);
+			sc.close();
+		}
+}
